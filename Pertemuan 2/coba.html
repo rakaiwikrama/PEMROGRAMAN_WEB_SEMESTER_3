@@ -1,0 +1,56 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Test</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+        }
+
+        #status {
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #eee;
+        }
+
+        button {
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Focus Test</h1>
+
+    <div id="status">
+        Status: <strong id="focusStatus">Belum diketahui</strong>
+    </div>
+
+    <button onclick="testFocus()">Test Focus</button>
+
+    <script>
+        window.addEventListener("focus", function () {
+            document.getElementById("focusStatus").textContent = "FOCUS";
+            console.log("Window mendapatkan focus");
+        });
+
+        window.addEventListener("blur", function () {
+            document.getElementById("focusStatus").textContent = "BLUR";
+            console.log("Window kehilangan focus");
+        });
+
+        function testFocus() {
+            window.focus();
+            console.log("window.focus() dipanggil");
+        }
+    </script>
+
+</body>
+</html>
+```
