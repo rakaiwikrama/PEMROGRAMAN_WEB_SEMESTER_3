@@ -37,10 +37,14 @@
                     <label for="tahun">Tahun Terbit</label><br>
                     <input type="number" id="tahun" name="tahun" min="1900" max="2026" required>
                 </p>
-                <p>
-                    <label for="isbn">ISBN</label><br>
-                    <input type="text" id="isbn" name="isbn">
-                </p>
+                <label for="isbn">ISBN</label><br>
+                <input 
+                    type="text" 
+                    id="isbn" 
+                    name="isbn"
+                    pattern="[0-9-]+"
+                    title="ISBN hanya boleh berisi angka dan tanda hubung (-)"
+                >
                 <p>
                     <label for="stok">Stok</label><br>
                     <input type="number" id="stok" name="stok" min="0" required>
